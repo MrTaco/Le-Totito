@@ -9,10 +9,32 @@ H="H"
 I="I"
 x=False
 ganador="0"
-d=0
+q=0
 print(" Bienvenido al menu de totito. \n Escoger la casilla que se quiere llenar.\n J1=X J2=O")
-for d in range (8):
+for d in range (5):
+	q=q+1
 	if x==False:
+		if x==False and ganador=="0": 
+			print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
+			opc1=input("Turno del Jugador 1, seleccione una opción: ")
+			if opc1==A and A!="O":
+				A="X"
+			if opc1==B and B!="O":
+				B="X"
+			if opc1==C and C!="O":
+				C="X"
+			if opc1==D and D!="O":
+				D="X"
+			if opc1==E and E!="O":
+				E="X"
+			if opc1==F and F!="O":
+				F="X"
+			if opc1==G and G!="O":
+				G="X"
+			if opc1==H and H!="O":
+				H="X"
+			if opc1==I and I!="O":
+				I="X"
 		if A=="X" and B=="X" and C=="X":
 			x=True
 			ganador="Jugador 1"
@@ -37,6 +59,27 @@ for d in range (8):
 		if G=="X" and E=="X" and C=="X":
 			x=True
 			ganador="Jugador 1"
+		if x==False and ganador=="0":		
+			print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
+			opc2=input("Turno del Jugador 2, seleccione una opción: ")
+			if opc2==A and A!="X":
+				A="O"
+			if opc2==B and B!="X":
+				B="O"
+			if opc2==C and C!="X":
+				C="O"
+			if opc2==D and D!="X":
+				D="O"
+			if opc2==E and E!="X":
+				E="O"
+			if opc2==F and F!="X":
+				F="O"
+			if opc2==G and G!="X":
+				G="O"
+			if opc2==H and H!="X":
+				H="O"
+			if opc2==I and I!="X":
+				I="O"
 		if A=="O" and B=="O" and C=="O":
 			x=True
 			ganador="Jugador 2"
@@ -61,49 +104,8 @@ for d in range (8):
 		if G=="O" and E=="O" and C=="O":
 			x=True
 			ganador="Jugador 2"
-		if x==False and ganador=="0": 
-			print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
-			opc1=input("Turno del Jugador 1, seleccione una opción: ")
-			if opc1==A and A!="O":
-				A="X"
-			if opc1==B and B!="O":
-				B="X"
-			if opc1==C and C!="O":
-				C="X"
-			if opc1==D and D!="O":
-				D="X"
-			if opc1==E and E!="O":
-				E="X"
-			if opc1==F and F!="O":
-				F="X"
-			if opc1==G and G!="O":
-				G="X"
-			if opc1==H and H!="O":
-				H="X"
-			if opc1==I and I!="O":
-				I="X"
-		if x==False and ganador=="0":		
-			print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
-			opc2=input("Turno del Jugador 2, seleccione una opción: ")
-			if opc2==A and A!="X":
-				A="O"
-			if opc2==B and B!="X":
-				B="O"
-			if opc2==C and C!="X":
-				C="O"
-			if opc2==D and D!="X":
-				D="O"
-			if opc2==E and E!="X":
-				E="O"
-			if opc2==F and F!="X":
-				F="O"
-			if opc2==G and G!="X":
-				G="O"
-			if opc2==H and H!="X":
-				H="O"
-			if opc2==I and I!="X":
-				I="O"
-if d==9:
-	ganador="empate"
+
+if q>=4:
+	ganador="EMPATE"
 print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
 print("Ganador: "+ ganador)
