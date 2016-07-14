@@ -7,14 +7,13 @@ F="F"
 G="G"
 H="H"
 I="I"
+q=1
 x=False
-ganador="0"
-q=0
+ganador="EMPATE"
 print(" Bienvenido al menu de totito. \n Escoger la casilla que se quiere llenar.\n J1=X J2=O")
 for d in range (5):
-	q=q+1
 	if x==False:
-		if x==False and ganador=="0": 
+		if x==False and ganador=="EMPATE" and q<=5: 
 			print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
 			opc1=input("Turno del Jugador 1, seleccione una opción: ")
 			if opc1==A and A!="O":
@@ -59,7 +58,7 @@ for d in range (5):
 		if G=="X" and E=="X" and C=="X":
 			x=True
 			ganador="Jugador 1"
-		if x==False and ganador=="0":		
+		if x==False and ganador=="EMPATE" and q<=4:		
 			print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
 			opc2=input("Turno del Jugador 2, seleccione una opción: ")
 			if opc2==A and A!="X":
@@ -104,8 +103,6 @@ for d in range (5):
 		if G=="O" and E=="O" and C=="O":
 			x=True
 			ganador="Jugador 2"
-
-if q>=4:
-	ganador="EMPATE"
+	q=q+1
 print (A+" "+B+" "+C+"\n"+D+" "+E+" "+F+"\n"+G+" "+H+" "+I)
 print("Ganador: "+ ganador)
